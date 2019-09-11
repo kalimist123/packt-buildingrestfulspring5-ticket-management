@@ -1,5 +1,6 @@
 package com.packtpub.restapp.ticketmanagement.controllers;
 
+import com.packtpub.restapp.ticketmanagement.errorhanders.ErrorHandler;
 import com.packtpub.restapp.ticketmanagement.model.User;
 import com.packtpub.restapp.ticketmanagement.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/user")
-public class UserController {
+public class UserController  extends ErrorHandler {
 
     @Autowired
     private UserService userService;

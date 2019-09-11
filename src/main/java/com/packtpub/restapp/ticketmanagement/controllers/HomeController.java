@@ -1,5 +1,6 @@
 package com.packtpub.restapp.ticketmanagement.controllers;
 
+import com.packtpub.restapp.ticketmanagement.errorhanders.ErrorHandler;
 import com.packtpub.restapp.ticketmanagement.service.SecurityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,7 +13,7 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/")
-public class HomeController {
+public class HomeController extends ErrorHandler {
 
     @Autowired
     SecurityService securityService;
